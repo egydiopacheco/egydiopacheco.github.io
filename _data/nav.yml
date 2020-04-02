@@ -1,13 +1,14 @@
 - name: Home
   link: '/'
-- name: About
-  link: '/about'
-- name: Contact
-  link: '/contact'
 - name: Posts
   link: '/posts'
 # - name: Projects
 #   link: '/projects'
+- name: About
+  link: '/about'
+- name: Contact
+  link: '/contact'
+
 - name: Résumé
   link: '/static/assets/Resume.pdf'
   tab: new
