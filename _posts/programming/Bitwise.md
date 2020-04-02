@@ -1,9 +1,10 @@
 ---
 title: Bitwise operations in coding
-category: programming
+category: tech
 excerpt: >-
     Using bitwise in practice.
 ---
+
 
 # Bitwise in coding
 
@@ -14,8 +15,7 @@ Firstly I solved it with a lot of nested for and ifs, which lead me to pass the 
 But then I tought about the bitwise operators, which are fast methods of operations since it "operates at the processor level". For those who dont know about bitwise operators, I made a simple image to explain it in a very superficial level.
 
 
-![](<blockquote class="imgur-embed-pub" lang="en" data-id="a/siGRcOA"><a href="//imgur.com/a/siGRcOA"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
-
+![](https://i.imgur.com/s8BQfsH.jpg)
 
 But basically, those operator works on the bit level, and do operations like those in the image. 
 

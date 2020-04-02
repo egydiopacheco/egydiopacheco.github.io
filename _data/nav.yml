@@ -6,9 +6,10 @@
 #   link: '/projects'
 - name: About
   link: '/about'
+  
 - name: Contact
   link: '/contact'
 
-- name: Résumé
+- name: CV
   link: '/static/assets/Resume.pdf'
   tab: new
