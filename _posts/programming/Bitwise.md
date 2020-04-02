@@ -1,8 +1,8 @@
 ---
-layout: post
 title: Bitwise operations in coding
-tags: Java, Fundamentals
-categories: Java
+category: programming
+excerpt: >-
+    Using bitwise in practice.
 ---
 
 # Bitwise in coding
