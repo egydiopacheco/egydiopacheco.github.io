@@ -4,7 +4,9 @@
   tab: new
 - name: LinkedIn
   url: '//www.linkedin.com/in/egydio-pacheco-8ab77a15a/'
+  tab: new
 - name: Twitter
   base_url: '//www.twitter.com/'
   username: 'egy_pn'
+  tab: new
 
