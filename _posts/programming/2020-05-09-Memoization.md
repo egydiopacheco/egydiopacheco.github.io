@@ -23,8 +23,8 @@ int main () {
 	start = clock();
 	int n = 45;
 	printf("%d\n", fib(n));
-    end = clock();
-    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    	end = clock();
+    	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 	printf("Time spend in this to run this program: %d ms", cpu_time_used);
 	return EXIT_SUCESSFUL;
 }
