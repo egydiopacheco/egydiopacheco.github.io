@@ -1,7 +1,5 @@
 ---
-layout: post
-non_post: true
+layout: default
 title: Contact
+permalink: /contact/
 ---
-
-You can contact me on the several social medias listed on this site or send me an email on : egydio.neto@usp.br
