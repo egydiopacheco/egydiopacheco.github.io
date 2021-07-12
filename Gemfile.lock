@@ -281,7 +281,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   html-proofer
-  jekyll (~> 3.5)
   jekyll-feed (~> 0.6)
   minima (~> 2.4.0)
   rdiscount

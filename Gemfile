@@ -16,10 +16,10 @@ gem "minima", "~> 2.4.0"
 # This is the gem used to test the output html
 gem "html-proofer"
 
-# Gems for github pages
-source 'https://rubygems.org'
-gem 'github-pages'
+# Github pages gemm
+gem 'github-pages', group: :jekyll_plugins
 gem 'rdiscount'
+
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
