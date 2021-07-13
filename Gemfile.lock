@@ -221,15 +221,13 @@ GEM
     listen (3.1.5)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    mini_portile2 (2.5.3)
     minima (2.4.1)
       jekyll (~> 3.5)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -276,7 +274,7 @@ GEM
     yell (2.2.2)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   github-pages
@@ -290,4 +288,4 @@ RUBY VERSION
    ruby 2.5.5p157
 
 BUNDLED WITH
-   1.17.3
+   2.2.23
