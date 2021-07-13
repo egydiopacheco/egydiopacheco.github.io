@@ -12,11 +12,9 @@ categories: shell
 
 
 
-
-
 General comments on how you can solve the 42Basecamp shell00 exercise assignment.
 
-
+<!--more-->
 
 - Exercise 00:
   
