@@ -1,13 +1,9 @@
 ---
-
 layout: post
-
-title: Shell 00 - General tips
-
-date : 2021-07-13 09:50:00
-
+title: "Shell 00 - General tips"
+date : 2021-07-13 09:50:00 +0200
 categories: shell
-
+comments: false
 ---
 
 
