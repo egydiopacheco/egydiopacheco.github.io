@@ -1,6 +1,6 @@
 ---
 
-layout: notes
+layout: posts
 
 title: Shell 00 - General tips
 
