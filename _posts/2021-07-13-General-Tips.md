@@ -1,22 +1,16 @@
-## ---
-
-layout: notes
-
-title: Shell 00 - General tips
-
-date : 2021-07-13 09:50:00
-
-categories: shell
-
 ---
-
-
+layout: post
+title: "Shell 00 - General tips"
+date : 2021-07-13 09:50:00 +0200
+categories: shell
+comments: false
+---
 
 
 
 General comments on how you can solve the 42Basecamp shell00 exercise assignment.
 
-
+<!--more-->
 
 - Exercise 00:
   
