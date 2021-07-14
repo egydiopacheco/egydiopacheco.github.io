@@ -1,18 +1,14 @@
 ---
-
 layout: post
-
 title: "Shell 01 - General tips"
-
-date : 2021-07-14 20:31:00
-
+date : 2021-07-14 20:42:00 +0200
 categories: shell
-
 comments: false
-
 ---
 
-General comments on how you can solve the 42Basecamp shell01 exercise assignment.
+
+
+General comments on how you can solve the 42Basecamp shell00 exercise assignment.
 
 <!--more-->
 
