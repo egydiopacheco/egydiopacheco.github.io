@@ -8,7 +8,7 @@ comments: false
 
 
 
-General comments on how you can solve the 42Basecamp shell00 exercise assignment.
+General comments on how you can solve the 42Basecamp shell01 exercise assignment.
 
 <!--more-->
 
