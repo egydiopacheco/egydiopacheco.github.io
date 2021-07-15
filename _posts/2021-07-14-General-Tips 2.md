@@ -40,21 +40,22 @@ General comments on how you can solve the 42Basecamp shell01 exercise assignment
 
 - Exercise 04:
   
-  The context of regular expression are really useful on this one. Regex are tricky, so be careful. The tip is, run ```ifconfig -a``` inside your local machine terminal, and look for patterns on how MAC addresses show up. Useful commands:
+  The context of regular expression are really useful on this one. Regex are tricky, so be careful. The tip is, run ```ifconfig -a``` inside your local machine terminal, and look up for patterns on how MAC addresses show up, use regex to extract the information you want. Useful commands:
   
   - grep
   - awk
   - sed
+  - not a command -> Search for regex basic syntax
 
 - Exercise 05:
   
-  This is tricky. Try to take of all the special character and create ```MarVIn``` . Then add ``` '' ``` and check if you are able to create the file. Then add ```*``` and see if you can go. Go composing. Useful search:
+  This is tricky. Try to take of all the special characters out and create the base ```MarVIn``` file. Then add ``` '' ``` and check if you are able to create the file, if not, you found a problem, solve it first before you continue. Then add ```*``` and see if you can it okay... Compose things, start at the base case and add complexity, step by step. Useful search:
   
   - Escape character: backslash: (```\```)
 
 - Exercise 06:
   
-  Type ls -l on your local machine, you will get an output (I suggested to do it on your local machine, because it will return more outputs without having to create files at the virtual environment. Basically, it is easier to test and debug). Now try to print only odd lines of this output. Do not insert blank/empty lines. Useful commands:
+  Type ```ls -l``` on your local machine, you will get an output (I suggested to do it on your local machine, because it will return more outputs without having to create files at the virtual environment. Basically, it is easier to test and debug). Now try to print only odd lines of this output. Do not insert blank/empty lines. Useful commands:
   
   - sed
   
@@ -62,7 +63,7 @@ General comments on how you can solve the 42Basecamp shell01 exercise assignment
 
 - Exercise 07:
   
-  It is simple, but will demand time. You have to compose results of a command to other commands as arguments, using the pipeline operator ```|```. Think about a factory, every step will do a tiny thing, but in the you will have the whole product. Useful commands:
+  It is simple, but will demand time. You have to compose results of a command to other commands as arguments, using the pipeline operator ```|```. Think about a factory, every step will do a tiny thing, but in the end you will have the whole product. Useful commands:
   
   - sed
   
