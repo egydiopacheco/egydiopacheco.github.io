@@ -69,7 +69,7 @@ Quick reminders:
 
   Steps:
 
-  - Open a ```if/ else``  statement
+  - Open a ```if/ else```  statement
   - Use ```write``` to print `P` for positive and `N` for negative
   - Use double quotes ```""``` around `P` and `N`
 
