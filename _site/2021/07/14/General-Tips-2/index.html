@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>Shell 01 - General tips</h2>
+        <i>posted on 14 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp shell01 exercise assignment.</p>
+
+<!--more-->
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>This is just a reminder.</p>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>In this exercise you learn how to deal with environment variables. You can access then in bash with this syntax: <code class="highlighter-rouge">$VARIABLE_NAME</code> . Useful commands:</p>
+
+    <ul>
+      <li>tr</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>You have to search recursively, inside a directory, for files with <code class="highlighter-rouge">.sh</code> extension and print them, without the extension. Example: you find <code class="highlighter-rouge">test.sh</code> and them print <code class="highlighter-rouge">test</code>. Useful commands:</p>
+
+    <ul>
+      <li>
+        <p>find</p>
+      </li>
+      <li>
+        <p>exec</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>Follow the same logic as the exercise 02, but now you have to count the number of files, folders, subfolders, found. Useful comands:</p>
+
+    <ul>
+      <li>
+        <p>find</p>
+      </li>
+      <li>
+        <p>wc</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>The context of regular expression are really useful on this one. Regex are tricky, so be careful. The tip is, run <code class="highlighter-rouge">ifconfig -a</code> inside your local machine terminal, and look up for patterns on how MAC addresses show up, use regex to extract the information you want. Useful commands:</p>
+
+    <ul>
+      <li>grep</li>
+      <li>awk</li>
+      <li>sed</li>
+      <li>not a command -&gt; Search for regex basic syntax</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>This is tricky. Try to take of all the special characters out and create the base <code class="highlighter-rouge">MarVIn</code> file. Then add <code class="highlighter-rouge">''</code> and check if you are able to create the file, if not, you found a problem, solve it first before you continue. Then add <code class="highlighter-rouge">*</code> and see if you can it okay… Compose things, start at the base case and add complexity, step by step. Useful search:</p>
+
+    <ul>
+      <li>Escape character: backslash: (<code class="highlighter-rouge">\</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 06:</p>
+
+    <p>Type <code class="highlighter-rouge">ls -l</code> on your local machine, you will get an output (I suggested to do it on your local machine, because it will return more outputs without having to create files at the virtual environment. Basically, it is easier to test and debug). Now try to print only odd lines of this output. Do not insert blank/empty lines. Useful commands:</p>
+
+    <ul>
+      <li>
+        <p>sed</p>
+      </li>
+      <li>
+        <p>awk</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 07:</p>
+
+    <p>It is simple, but will demand time. You have to compose results of a command to other commands as arguments, using the pipeline operator <code class="highlighter-rouge">|</code>. Think about a factory, every step will do a tiny thing, but in the end you will have the whole product. Useful commands:</p>
+
+    <ul>
+      <li>
+        <p>sed</p>
+      </li>
+      <li>
+        <p>awk</p>
+      </li>
+      <li>
+        <p>grep</p>
+      </li>
+      <li>
+        <p>tr</p>
+      </li>
+      <li>
+        <p>rev</p>
+      </li>
+      <li>
+        <p>sort</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 08:</p>
+
+    <p>I have not done it yet, I will update it as soon as I finish.</p>
+  </li>
+</ul>
+
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/shell/">#shell</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>

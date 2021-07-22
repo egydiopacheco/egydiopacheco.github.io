@@ -1,1 +1,351 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-12T09:56:35-03:00</updated><id>http://localhost:4000/</id><title type="html">My blog</title><subtitle>Just my space to write things</subtitle><entry><title type="html">Hello, World!</title><link href="http://localhost:4000/2021/07/11/Lorem-Ipsum/" rel="alternate" type="text/html" title="Hello, World!" /><published>2021-07-11T06:49:00-03:00</published><updated>2021-07-11T06:49:00-03:00</updated><id>http://localhost:4000/2021/07/11/Lorem-Ipsum</id><content type="html" xml:base="http://localhost:4000/2021/07/11/Lorem-Ipsum/">&lt;p&gt;Hello, am I working?&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, am I working?</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-07-16T12:25:04-03:00</updated><id>http://localhost:4000/blog/</id><title type="html">My blog</title><subtitle>Just my space to write things</subtitle><entry><title type="html">C 00 - General tips</title><link href="http://localhost:4000/blog/2021/07/15/General-Tips-3/" rel="alternate" type="text/html" title="C 00 - General tips" /><published>2021-07-15T16:22:00-03:00</published><updated>2021-07-15T16:22:00-03:00</updated><id>http://localhost:4000/blog/2021/07/15/General-Tips%203</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/15/General-Tips-3/">&lt;p&gt;General comments on how you can solve the 42Basecamp C00 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Quick reminders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In C00 you can use just &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function. Do &lt;strong&gt;not&lt;/strong&gt; import &lt;code class=&quot;highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function is a system call function that belongs to POSIX. Import &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;unistd.h&amp;gt;&lt;/code&gt; so you can use it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://man7.org/linux/man-pages/man2/write.2.html&quot;&gt;Read the man page&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand the function signature:   &lt;code class=&quot;highlighter-rouge&quot;&gt;ssize_t write(int fd, const void *buf, size_t count);&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Think about the algorithm outside the computer. Use pen and paper to scratch around.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remember, you cant import functions from libraries. But you can create yours !&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;This is one is simple, &lt;strong&gt;&lt;em&gt;if&lt;/em&gt;&lt;/strong&gt;, you read the &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; man page.&lt;/p&gt;
+
+    &lt;p&gt;Steps:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Build a function using the given signature&lt;/li&gt;
+      &lt;li&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;It follow the same logic as exercise00, but now you have to print 26 characters (the whole alphabet). How you do this? Use &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt;.  You also need to learn how to declare and assign char variables. Here is how:&lt;/p&gt;
+
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; 	&lt;span class=&quot;n&quot;&gt;any_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;any_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Steps:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Declare a char variable;&lt;/li&gt;
+      &lt;li&gt;Assign it to the first letter of alphabet.&lt;/li&gt;
+      &lt;li&gt;Loop, until you reach &lt;code class=&quot;highlighter-rouge&quot;&gt;z&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function inside the while loop.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;It is exactly the same as exercise 01, but backwards.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;It is the same construction as the exercise 01 and 02. But using numbers 0-9. However, if your program is printing empty lines, read the &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; man page. Tip: do not use &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;The first problem using &lt;code class=&quot;highlighter-rouge&quot;&gt;if/ else&lt;/code&gt;. A number &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; is positive if &lt;code class=&quot;highlighter-rouge&quot;&gt;n &amp;gt;= 0&lt;/code&gt;, else it is negative.&lt;/p&gt;
+
+    &lt;p&gt;Steps:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Open a &lt;code class=&quot;highlighter-rouge&quot;&gt;if/ else&lt;/code&gt;  statement&lt;/li&gt;
+      &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; to print &lt;code class=&quot;highlighter-rouge&quot;&gt;P&lt;/code&gt; for positive and &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt; for negative&lt;/li&gt;
+      &lt;li&gt;Use double quotes &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; around &lt;code class=&quot;highlighter-rouge&quot;&gt;P&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;This was the last really simple problem on the assignment.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;Now things get a little more complex. Solution structure suggestion:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Declare one char variable for the hundreds, dozens and units.&lt;/li&gt;
+      &lt;li&gt;How far the hundreds can go? How far the dozens can go? How far the units can go?&lt;/li&gt;
+      &lt;li&gt;Make a triple nested loop, one for the hundreds, one for the dozens and one for the units.&lt;/li&gt;
+      &lt;li&gt;Every iteration should print a number on the terminal.&lt;/li&gt;
+      &lt;li&gt;Compute the changes with  &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; operator.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 06:&lt;/p&gt;
+
+    &lt;p&gt;This exercise is similar than exercise 05. Break the exercise in pieces. Try to print first only :&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;0, 1, 2, 3...10,11&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Then add more complexity and try do print :&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;00, 01, 02, 03...&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Now to try to print the pairs.&lt;/p&gt;
+
+    &lt;p&gt;Tips:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Break down the exercise in pieces using helper functions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 07:&lt;/p&gt;
+
+    &lt;p&gt;The trick to solve this one is that you can transform a &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;&lt;/strong&gt; in a  &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt;&lt;/strong&gt; with&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;new_char_variable = your_integer_goes_here + '0';&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;And also remember this: you can just do that if your integer is between &lt;code class=&quot;highlighter-rouge&quot;&gt;0 - 9&lt;/code&gt;. Which means that, for numbers with more than 2 digits you will have to break down the numbers into single digits. Keywords to do that:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Modulo operator &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Division operator &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Recursion process (it also can be an iterative process, if you prefer)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 08:&lt;/p&gt;
+
+    &lt;p&gt;I have not done it yet, I will update it as soon as I finish.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp C00 exercise assignment.</summary></entry><entry><title type="html">Shell 01 - General tips</title><link href="http://localhost:4000/blog/2021/07/14/General-Tips-2/" rel="alternate" type="text/html" title="Shell 01 - General tips" /><published>2021-07-14T15:42:00-03:00</published><updated>2021-07-14T15:42:00-03:00</updated><id>http://localhost:4000/blog/2021/07/14/General-Tips%202</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/14/General-Tips-2/">&lt;p&gt;General comments on how you can solve the 42Basecamp shell01 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;This is just a reminder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;In this exercise you learn how to deal with environment variables. You can access then in bash with this syntax: &lt;code class=&quot;highlighter-rouge&quot;&gt;$VARIABLE_NAME&lt;/code&gt; . Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;tr&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;You have to search recursively, inside a directory, for files with &lt;code class=&quot;highlighter-rouge&quot;&gt;.sh&lt;/code&gt; extension and print them, without the extension. Example: you find &lt;code class=&quot;highlighter-rouge&quot;&gt;test.sh&lt;/code&gt; and them print &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;find&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;exec&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;Follow the same logic as the exercise 02, but now you have to count the number of files, folders, subfolders, found. Useful comands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;find&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;wc&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;The context of regular expression are really useful on this one. Regex are tricky, so be careful. The tip is, run &lt;code class=&quot;highlighter-rouge&quot;&gt;ifconfig -a&lt;/code&gt; inside your local machine terminal, and look up for patterns on how MAC addresses show up, use regex to extract the information you want. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;grep&lt;/li&gt;
+      &lt;li&gt;awk&lt;/li&gt;
+      &lt;li&gt;sed&lt;/li&gt;
+      &lt;li&gt;not a command -&amp;gt; Search for regex basic syntax&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;This is tricky. Try to take of all the special characters out and create the base &lt;code class=&quot;highlighter-rouge&quot;&gt;MarVIn&lt;/code&gt; file. Then add &lt;code class=&quot;highlighter-rouge&quot;&gt;''&lt;/code&gt; and check if you are able to create the file, if not, you found a problem, solve it first before you continue. Then add &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; and see if you can it okay… Compose things, start at the base case and add complexity, step by step. Useful search:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Escape character: backslash: (&lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 06:&lt;/p&gt;
+
+    &lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;ls -l&lt;/code&gt; on your local machine, you will get an output (I suggested to do it on your local machine, because it will return more outputs without having to create files at the virtual environment. Basically, it is easier to test and debug). Now try to print only odd lines of this output. Do not insert blank/empty lines. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;sed&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;awk&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 07:&lt;/p&gt;
+
+    &lt;p&gt;It is simple, but will demand time. You have to compose results of a command to other commands as arguments, using the pipeline operator &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;. Think about a factory, every step will do a tiny thing, but in the end you will have the whole product. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;sed&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;awk&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;grep&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;tr&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;rev&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;sort&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 08:&lt;/p&gt;
+
+    &lt;p&gt;I have not done it yet, I will update it as soon as I finish.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp shell01 exercise assignment.</summary></entry><entry><title type="html">Shell 00 - General tips</title><link href="http://localhost:4000/blog/2021/07/13/General-Tips/" rel="alternate" type="text/html" title="Shell 00 - General tips" /><published>2021-07-13T04:50:00-03:00</published><updated>2021-07-13T04:50:00-03:00</updated><id>http://localhost:4000/blog/2021/07/13/General-Tips</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/13/General-Tips/">&lt;p&gt;General comments on how you can solve the 42Basecamp shell00 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;The first one is very straightforward, try to compose these commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;echo “some message”&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The pipe operator ( &amp;gt; )&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;This exercise is to learn about permissions and permission changes. You have to understand what is each component of the printed message by &lt;code class=&quot;highlighter-rouge&quot;&gt;ls -l&lt;/code&gt;.  After that you have to change the components of each test. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;chmod&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;touch -d “ custom date here “ filename&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;echo&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;It is the same of exercise 1 but with addition of hard and symbolic links. Check this reference for exercise 01 and 02 &lt;a href=&quot;https://salmenzouari.medium.com/what-is-soft-link-and-hard-link-in-linux-39e641e023bd#:~:text=A%20symbolic%20or%20soft%20link,to%20a%20non%2Dexistent%20file.&quot;&gt;click here&lt;/a&gt;. Useful commands:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;ln&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;A cool exercise. It is solvable by reading the extensive flag list of &lt;code class=&quot;highlighter-rouge&quot;&gt;man ls&lt;/code&gt;. Experiment on your computer root directory (/), which has a lot of files and folders.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;In this one, you start to feel the shell scritpt power. It brings a like more complexity compared to the past ones. You should read the &lt;code class=&quot;highlighter-rouge&quot;&gt;man git&lt;/code&gt; page. However, it is to extensive. Try to install an extension called &lt;code class=&quot;highlighter-rouge&quot;&gt;tldr&lt;/code&gt; (&lt;em&gt;Too long to read&lt;/em&gt;) and type &lt;code class=&quot;highlighter-rouge&quot;&gt;tldr git&lt;/code&gt; on your terminal. Commands to look up:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;git log&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;In my opinion, the hardest one in the list. The interpretation of the problem is crucial: &lt;strong&gt;They want the list of files ignored by the .gitignore file, not what is inside the .gitignore file&lt;/strong&gt;. Commands to look up:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-bash```&quot;&gt;find
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git check-ignore
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 06:&lt;/p&gt;
+
+    &lt;p&gt;This one is super simple. Really. Just read the &lt;code class=&quot;highlighter-rouge&quot;&gt;man patch&lt;/code&gt; and experiment with the files given in the zip archive on your computer. It is solvable by one command.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 07:&lt;/p&gt;
+
+    &lt;p&gt;Well, the main tip I can give you is: Richard Stallman solved this problem for you in the &lt;code class=&quot;highlighter-rouge&quot;&gt;man find&lt;/code&gt; example section. Also look up for regex!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 08:&lt;/p&gt;
+
+    &lt;p&gt;This is one tricky. You have to understand what is about magic, and the man page for it, is not very clear.&lt;/p&gt;
+
+    &lt;p&gt;But your solution file should follow the following design:&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell```&quot;&gt;offset type test message
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;Where offset is the limit of bytes your data will be tested. Type is, well the type, of you’re dealing with. Test,  will be the values your file will be compared with. The message is what will be printed when the comparison succeeds.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp shell00 exercise assignment.</summary></entry></feed>

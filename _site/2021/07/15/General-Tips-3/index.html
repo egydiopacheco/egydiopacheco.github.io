@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>C 00 - General tips</h2>
+        <i>posted on 15 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp C00 exercise assignment.</p>
+
+<!--more-->
+
+<p>Quick reminders:</p>
+
+<ul>
+  <li>
+    <p>In C00 you can use just <code class="highlighter-rouge">write</code> function. Do <strong>not</strong> import <code class="highlighter-rouge">stdio.h</code>.</p>
+  </li>
+  <li>
+    <p>The <code class="highlighter-rouge">write</code> function is a system call function that belongs to POSIX. Import <code class="highlighter-rouge">&lt;unistd.h&gt;</code> so you can use it.</p>
+  </li>
+  <li>
+    <p><a href="https://man7.org/linux/man-pages/man2/write.2.html">Read the man page</a></p>
+  </li>
+  <li>
+    <p>Understand the function signature:   <code class="highlighter-rouge">ssize_t write(int fd, const void *buf, size_t count);</code></p>
+  </li>
+  <li>
+    <p>Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.</p>
+  </li>
+  <li>
+    <p>Think about the algorithm outside the computer. Use pen and paper to scratch around.</p>
+  </li>
+  <li>
+    <p>Remember, you cant import functions from libraries. But you can create yours !</p>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>This is one is simple, <strong><em>if</em></strong>, you read the <code class="highlighter-rouge">write</code> man page.</p>
+
+    <p>Steps:</p>
+
+    <ul>
+      <li>Build a function using the given signature</li>
+      <li>Use the <code class="highlighter-rouge">write</code> function.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>It follow the same logic as exercise00, but now you have to print 26 characters (the whole alphabet). How you do this? Use <code class="highlighter-rouge">while</code>.  You also need to learn how to declare and assign char variables. Here is how:</p>
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> 	<span class="n">any_name</span><span class="p">;</span>
+<span class="n">any_name</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>Steps:</p>
+
+    <ul>
+      <li>Declare a char variable;</li>
+      <li>Assign it to the first letter of alphabet.</li>
+      <li>Loop, until you reach <code class="highlighter-rouge">z</code>.</li>
+      <li>Use <code class="highlighter-rouge">write</code> function inside the while loop.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>It is exactly the same as exercise 01, but backwards.</p>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>It is the same construction as the exercise 01 and 02. But using numbers 0-9. However, if your program is printing empty lines, read the <code class="highlighter-rouge">write</code> man page. Tip: do not use <code class="highlighter-rouge">int</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>The first problem using <code class="highlighter-rouge">if/ else</code>. A number <code class="highlighter-rouge">n</code> is positive if <code class="highlighter-rouge">n &gt;= 0</code>, else it is negative.</p>
+
+    <p>Steps:</p>
+
+    <ul>
+      <li>Open a <code class="highlighter-rouge">if/ else</code>  statement</li>
+      <li>Use <code class="highlighter-rouge">write</code> to print <code class="highlighter-rouge">P</code> for positive and <code class="highlighter-rouge">N</code> for negative</li>
+      <li>Use double quotes <code class="highlighter-rouge">""</code> around <code class="highlighter-rouge">P</code> and <code class="highlighter-rouge">N</code></li>
+    </ul>
+
+    <p>This was the last really simple problem on the assignment.</p>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>Now things get a little more complex. Solution structure suggestion:</p>
+
+    <ul>
+      <li>Declare one char variable for the hundreds, dozens and units.</li>
+      <li>How far the hundreds can go? How far the dozens can go? How far the units can go?</li>
+      <li>Make a triple nested loop, one for the hundreds, one for the dozens and one for the units.</li>
+      <li>Every iteration should print a number on the terminal.</li>
+      <li>Compute the changes with  <code class="highlighter-rouge">++</code> operator.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 06:</p>
+
+    <p>This exercise is similar than exercise 05. Break the exercise in pieces. Try to print first only :</p>
+
+    <p><code class="highlighter-rouge">0, 1, 2, 3...10,11</code></p>
+
+    <p>Then add more complexity and try do print :</p>
+
+    <p><code class="highlighter-rouge">00, 01, 02, 03...</code></p>
+
+    <p>Now to try to print the pairs.</p>
+
+    <p>Tips:</p>
+
+    <ul>
+      <li>Break down the exercise in pieces using helper functions.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 07:</p>
+
+    <p>The trick to solve this one is that you can transform a <strong><code class="highlighter-rouge">int</code></strong> in a  <strong><code class="highlighter-rouge">char</code></strong> with</p>
+
+    <p><code class="highlighter-rouge">new_char_variable = your_integer_goes_here + '0';</code></p>
+
+    <p>And also remember this: you can just do that if your integer is between <code class="highlighter-rouge">0 - 9</code>. Which means that, for numbers with more than 2 digits you will have to break down the numbers into single digits. Keywords to do that:</p>
+
+    <ul>
+      <li>Modulo operator <code class="highlighter-rouge">%</code></li>
+      <li>Division operator <code class="highlighter-rouge">/</code></li>
+      <li>Recursion process (it also can be an iterative process, if you prefer)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 08:</p>
+
+    <p>I have not done it yet, I will update it as soon as I finish.</p>
+  </li>
+</ul>
+
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/C/">#C</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>

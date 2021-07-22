@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>Shell 00 - General tips</h2>
+        <i>posted on 13 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp shell00 exercise assignment.</p>
+
+<!--more-->
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>The first one is very straightforward, try to compose these commands:</p>
+
+    <ul>
+      <li>
+        <p>echo “some message”</p>
+      </li>
+      <li>
+        <p>The pipe operator ( &gt; )</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>This exercise is to learn about permissions and permission changes. You have to understand what is each component of the printed message by <code class="highlighter-rouge">ls -l</code>.  After that you have to change the components of each test. Useful commands:</p>
+
+    <ul>
+      <li>
+        <p>chmod</p>
+      </li>
+      <li>
+        <p>touch -d “ custom date here “ filename</p>
+      </li>
+      <li>
+        <p>echo</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>It is the same of exercise 1 but with addition of hard and symbolic links. Check this reference for exercise 01 and 02 <a href="https://salmenzouari.medium.com/what-is-soft-link-and-hard-link-in-linux-39e641e023bd#:~:text=A%20symbolic%20or%20soft%20link,to%20a%20non%2Dexistent%20file.">click here</a>. Useful commands:</p>
+
+    <ul>
+      <li>ln</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>A cool exercise. It is solvable by reading the extensive flag list of <code class="highlighter-rouge">man ls</code>. Experiment on your computer root directory (/), which has a lot of files and folders.</p>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>In this one, you start to feel the shell scritpt power. It brings a like more complexity compared to the past ones. You should read the <code class="highlighter-rouge">man git</code> page. However, it is to extensive. Try to install an extension called <code class="highlighter-rouge">tldr</code> (<em>Too long to read</em>) and type <code class="highlighter-rouge">tldr git</code> on your terminal. Commands to look up:</p>
+
+    <ul>
+      <li>git log</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>In my opinion, the hardest one in the list. The interpretation of the problem is crucial: <strong>They want the list of files ignored by the .gitignore file, not what is inside the .gitignore file</strong>. Commands to look up:</p>
+
+    <ul>
+      <li>
+        <pre><code class="language-bash```">find
+</code></pre>
+      </li>
+      <li>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git check-ignore
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 06:</p>
+
+    <p>This one is super simple. Really. Just read the <code class="highlighter-rouge">man patch</code> and experiment with the files given in the zip archive on your computer. It is solvable by one command.</p>
+  </li>
+  <li>
+    <p>Exercise 07:</p>
+
+    <p>Well, the main tip I can give you is: Richard Stallman solved this problem for you in the <code class="highlighter-rouge">man find</code> example section. Also look up for regex!</p>
+  </li>
+  <li>
+    <p>Exercise 08:</p>
+
+    <p>This is one tricky. You have to understand what is about magic, and the man page for it, is not very clear.</p>
+
+    <p>But your solution file should follow the following design:</p>
+
+    <pre><code class="language-shell```">offset type test message
+</code></pre>
+
+    <p>Where offset is the limit of bytes your data will be tested. Type is, well the type, of you’re dealing with. Test,  will be the values your file will be compared with. The message is what will be printed when the comparison succeeds.</p>
+  </li>
+</ul>
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/shell/">#shell</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>
