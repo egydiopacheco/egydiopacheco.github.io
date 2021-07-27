@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C 02 - General tips"
-date : 2021-07-22 05:27:00 +0200
+date : 2021-07-27 05:27:00 +0200
 categories: C
 comments: false
 
@@ -15,7 +15,7 @@ General comments on how you can solve the 42Basecamp C02 exercise assignment.
 
 Quick reminders:
 
-- In C02 you can only use just ```write``` function at exercises 11 and 12. Do **not** import ```stdio.h```.
+- In C02 you can only use  ```write``` function at exercises 11 and 12. Do **not** import ```stdio.h```.
 
 - Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.
 
@@ -25,13 +25,13 @@ Quick reminders:
 
   ---
 
-  This exercise assignment is about reading the man pages. Really. Exercises 1 to 8 are all similar, 9 and 10 are a bit difficult but totally doable. 11 and 12 are challenges.
+  This exercise assignment is about reading man pages. Really. Exercises 1 to 8 are all similar, 9 and 10 are a bit difficult but totally doable. 11 and 12 are challenges.
 
-  11 and 12 are not listed here. If I have time until the end of the bootcamp I comeback to edit this one.
+  11 and 12 are not listed here. If I have time until the end of the bootcamp I'll comeback them.
 
 - Exercise 00:
 
-  I will not say anything about this one. Just surprise yourself with : ``man strcpy``
+  I will say nothing about this one. Just surprise yourself with : ``man strcpy``
 
 - Exercise 01:
 
