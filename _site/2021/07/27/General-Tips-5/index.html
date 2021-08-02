@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>C 02 - General tips</h2>
+        <i>posted on 27 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp C02 exercise assignment.</p>
+
+<!--more-->
+
+<p>Quick reminders:</p>
+
+<ul>
+  <li>
+    <p>In C02 you can only use  <code class="highlighter-rouge">write</code> function at exercises 11 and 12. Do <strong>not</strong> import <code class="highlighter-rouge">stdio.h</code>.</p>
+  </li>
+  <li>
+    <p>Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.</p>
+  </li>
+  <li>
+    <p>Think about the algorithm outside the computer. Use pen and paper to scratch around.</p>
+  </li>
+  <li>
+    <p>Remember, you can’t import functions from libraries. But you can create yours !</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>This exercise assignment is about reading man pages. Really. Exercises 1 to 8 are all similar, 9 and 10 are a bit difficult but totally doable. 11 and 12 are challenges.</p>
+
+<p>11 and 12 are not listed here. If I have time until the end of the bootcamp I’ll comeback them.</p>
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>I will say nothing about this one. Just surprise yourself with : <code class="highlighter-rouge">man strcpy</code></p>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>Same as exercise 00, just with a tiny detail at the end. This detail is also explained on <code class="highlighter-rouge">man strcpy</code></p>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>Now, open your ASCII table! You will use it on exercises 2~8. The solution is just a while with an if condition using ASCII code.</p>
+
+    <p>Do not forget the <code class="highlighter-rouge">str[j] != 0</code> on the if condition.</p>
+
+    <p>The null character is represented by <code class="highlighter-rouge">\0</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>Now you just have to change the if condition, to verify if it is numeric. ASCII table again!</p>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>All the characters in the string must be lowercase. Yes, ASCII..</p>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>Same from exercise 04, but with uppercase. I think you already got the idea what is happening…</p>
+  </li>
+  <li>
+    <p>Exercise 06:</p>
+
+    <p>The ASCII code you want is: <code class="highlighter-rouge">(~ &lt; 32) and (= 127)</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 07:</p>
+
+    <p>The difference between <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">A</code> in ASCII table is <code class="highlighter-rouge">32</code>. So the operation the you want to do is <code class="highlighter-rouge">x - 32</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 08:</p>
+
+    <p>Same as exercise 07, but now you do <code class="highlighter-rouge">x + 32</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 09:</p>
+
+    <p>This exercise is not difficult. But is boring, you have to be careful and it will take some of your time. You want to compose the if conditions with all the constraints the problem states.</p>
+  </li>
+  <li>
+    <p>Exercise 10:</p>
+
+    <p>It is not that clear of the exercise wants and the output is kinda obscure. Steps:</p>
+
+    <p>Read the man page several times.</p>
+
+    <p>Create a function that calculates the length of a string.</p>
+
+    <p>You want to return an unsigned integer. Be careful to not create int type iterators.</p>
+
+    <p>Read the man page again. Do not forget the null terminator.</p>
+
+    <p>Size is size or size minus something?</p>
+
+    <p>If you are stuck, read the apple source code for this function.</p>
+
+    <p>Do tests while you progress with the function.</p>
+  </li>
+</ul>
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/C/">#C</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>C 01 - General tips</h2>
+        <i>posted on 22 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp C01 exercise assignment.</p>
+
+<!--more-->
+
+<p>Quick reminders:</p>
+
+<ul>
+  <li>
+    <p>In C01 you can use just <code class="highlighter-rouge">write</code> function. Do <strong>not</strong> import <code class="highlighter-rouge">stdio.h</code>.</p>
+  </li>
+  <li>
+    <p>The <code class="highlighter-rouge">write</code> function is a system call function that belongs to POSIX. Import <code class="highlighter-rouge">&lt;unistd.h&gt;</code> so you can use it.</p>
+  </li>
+  <li>
+    <p><a href="https://man7.org/linux/man-pages/man2/write.2.html">Read the man page</a></p>
+  </li>
+  <li>
+    <p>Understand the function signature:   <code class="highlighter-rouge">ssize_t write(int fd, const void *buf, size_t count);</code></p>
+  </li>
+  <li>
+    <p>Visualize the quick sort algorithm <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU&amp;t=1s">Here</a></p>
+  </li>
+  <li>
+    <p>Pseudocode for quick sort <a href="https://www.cc.gatech.edu/classes/cs3158_98_fall/quicksort.html">Here</a></p>
+  </li>
+  <li>
+    <p>Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.</p>
+  </li>
+  <li>
+    <p>Think about the algorithm outside the computer. Use pen and paper to scratch around.</p>
+  </li>
+  <li>
+    <p>Remember, you can’t import functions from libraries. But you can create yours !</p>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>You want to access the variable nbr, and change it. Read about the derreferentiator operator. It looks like a pointer but they are not the same.</p>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>It is the same as the exercise 00, but repeated 9 times.</p>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>In c, arguments are passed by value, not by reference. In other words, you have to access the variables and change them. You may consider a temporary variable so you do not lost your original values.</p>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>Create two variables, one for storing the result of integer division (<code class="highlighter-rouge">/</code>) and other for storing the value of mod operation (<code class="highlighter-rouge">%</code>). After that use the derreferenciator operator to access the value inside the address passed as parameter, and change them accordingly:</p>
+
+    <ul>
+      <li>division receives the value of division operation;</li>
+      <li>mod receives the value of mod operation.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>Do the same as exercise 03, but this the be careful to not lose your values. Create temporary variables to help you while you do the operations.</p>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>Build a while loop with a counter starting at 0. Loop over until the end of the string. You can use the ‘\0’ as the condition for your while. Example:</p>
+
+    <ul>
+      <li>
+        <p>while (….!= ‘\0’)</p>
+
+        <p>When printing using write, remember you don’t need to use &amp; for arrays, because they are already pointers, hence, contains an address inside of them.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 06:</p>
+
+    <p>You can solve this using a loop structure similar to exercise 05 with a counter, to get the size of the string. You can also use the difference between 2 pointers, to get the size of the string. That works because pointers support arithmetic operations. So you can do something like (this is just a scratch) :</p>
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span>	<span class="o">*</span><span class="n">c</span><span class="p">;</span> <span class="o">&lt;-</span> <span class="n">put</span> <span class="n">some</span> <span class="n">values</span> <span class="n">here</span><span class="p">,</span> <span class="n">like</span> <span class="n">a</span> <span class="n">string</span>
+<span class="kt">char</span>	<span class="o">*</span><span class="n">d</span><span class="p">;</span>
+  
+<span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  
+<span class="n">d</span><span class="o">++</span><span class="p">;</span>
+<span class="n">d</span><span class="o">++</span><span class="p">;</span>
+  
+<span class="n">print</span><span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">c</span><span class="p">);</span> <span class="o">&lt;-</span> <span class="n">returns</span> <span class="mi">2</span><span class="p">;</span>
+  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Exercise 07:</p>
+
+    <p>If you have an array like: [1,2,3,4,5]. If you reverse it, the result will be: [5, 4, 3, 2, 1]. Realize that you just perfomed <code class="highlighter-rouge">n / 2</code>  operations, where  <code class="highlighter-rouge">n</code>  is the size of the array. If you perform   <code class="highlighter-rouge">n</code>  operations, you will undo the changes you made it, so you will get back to the original array.</p>
+
+    <p>After that, you will loop inside the array and change the first element with the last and so on, until you reach the middle. The main problem is to get the array indices right. Also, create a temporary variable so you do not lose values.</p>
+  </li>
+  <li>
+    <p>Exercise 08:</p>
+
+    <p>This exercise you should implement any sort algorithm. You can use bubble sort, quick sort, merge sort etc. Look for references on how to implement them.</p>
+  </li>
+</ul>
+
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/C/">#C</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>

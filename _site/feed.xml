@@ -1,4 +1,356 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-07-16T12:25:04-03:00</updated><id>http://localhost:4000/blog/</id><title type="html">My blog</title><subtitle>Just my space to write things</subtitle><entry><title type="html">C 00 - General tips</title><link href="http://localhost:4000/blog/2021/07/15/General-Tips-3/" rel="alternate" type="text/html" title="C 00 - General tips" /><published>2021-07-15T16:22:00-03:00</published><updated>2021-07-15T16:22:00-03:00</updated><id>http://localhost:4000/blog/2021/07/15/General-Tips%203</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/15/General-Tips-3/">&lt;p&gt;General comments on how you can solve the 42Basecamp C00 exercise assignment.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-08-02T17:26:01-03:00</updated><id>http://localhost:4000/blog/</id><title type="html">My blog</title><subtitle>Just my space to write things</subtitle><entry><title type="html">C 04 - General tips</title><link href="http://localhost:4000/blog/2021/07/28/General-Tips-7/" rel="alternate" type="text/html" title="C 04 - General tips" /><published>2021-07-28T00:19:00-03:00</published><updated>2021-07-28T00:19:00-03:00</updated><id>http://localhost:4000/blog/2021/07/28/%20General-Tips%207</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/28/General-Tips-7/">&lt;p&gt;General comments on how you can solve the 42Basecamp C04 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Quick reminders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In C04 you can only use  &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt;. Do &lt;strong&gt;not&lt;/strong&gt; import &lt;code class=&quot;highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Think about the algorithm outside the computer. Use pen and paper to scratch around.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remember, you can’t import functions from libraries. But you can create yours !&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Import &lt;code class=&quot;highlighter-rouge&quot;&gt;stdlib.h&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;string.h&lt;/code&gt; so you can debug with the expected returns. Don’t forget to remove the imports!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;You have done this exercise at C01 exercise 06.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;You have done this exercise at C01 exercise 05.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;You have done this exercise at C00 exercise 07.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;To convert &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt;  to &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;, use casting. Example: &lt;code class=&quot;highlighter-rouge&quot;&gt;x = (int) x;&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;To convert &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt;, decompose in single characters (&lt;code class=&quot;highlighter-rouge&quot;&gt;0~9&lt;/code&gt;) and then add &lt;code class=&quot;highlighter-rouge&quot;&gt;'0'&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Take care about the restrictions of this particular function. Remember when debugging that, the output of the original &lt;code class=&quot;highlighter-rouge&quot;&gt;atoi&lt;/code&gt; is different from &lt;code class=&quot;highlighter-rouge&quot;&gt;ft_atoi&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;Break down in multiple functions and test each of them separately. Suggestion of functions to build:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;ft_strlen() -&amp;gt; returns the size of a string&lt;/li&gt;
+      &lt;li&gt;ft_base_verify() -&amp;gt; returns 0 if no errors found, -1 otherwise. Check all base constraints&lt;/li&gt;
+      &lt;li&gt;ft_repetition() -&amp;gt; return 0 if there are no repetitions, -1 otherwise. Verify if there are characters that repeats&lt;/li&gt;
+      &lt;li&gt;ft_putnbr() -&amp;gt; the function from exercise 02, but with modifications. You have to use the base!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;It follows the same logic as the 04. It will take some time, it is not a simple exercise. If your time is not good, just go to the next list. But if you want to solve, break down into small functions, pay a lot of attention on the constraints. Most of your program will be constraint checking and a double while as the core algorithm.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp C04 exercise assignment.</summary></entry><entry><title type="html">C 03 - General tips</title><link href="http://localhost:4000/blog/2021/07/27/General-Tips-6/" rel="alternate" type="text/html" title="C 03 - General tips" /><published>2021-07-27T15:27:00-03:00</published><updated>2021-07-27T15:27:00-03:00</updated><id>http://localhost:4000/blog/2021/07/27/%20General-Tips%206</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/27/General-Tips-6/">&lt;p&gt;General comments on how you can solve the 42Basecamp C03 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Quick reminders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In C03 you cannot use any function . Do &lt;strong&gt;not&lt;/strong&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; any library.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Think about the algorithm outside the computer. Use pen and paper to scratch around.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remember, you can’t import functions from libraries. But you can create yours !&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This assignment list, you will have to rewrite functions that already exists in libraries.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;First of all: &lt;code class=&quot;highlighter-rouge&quot;&gt;man strcmp&lt;/code&gt;. Second, the output of this function is strange, so do not panic. You can import &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;string.h&amp;gt;&lt;/code&gt; just for debugging process. Do not forget to remove it!&lt;/p&gt;
+
+    &lt;p&gt;Another thing to be careful is: your return can be negative if you don’t be cautious. Read about &lt;em&gt;casting&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;It is the same as exercise 00 but limited by a integer n. If you made 00 this one will be simple.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;You have to write a function that concatenates two strings. Actually, there is an implementation on the man page.&lt;/p&gt;
+
+    &lt;p&gt;Do not forget to add the &lt;code class=&quot;highlighter-rouge&quot;&gt;\0&lt;/code&gt; at the end of concatenation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;As it happens with exercise 00/01, now you have to do the same you did on 02 but with an unsigned integer as a limit.&lt;/p&gt;
+
+    &lt;p&gt;Remember that your iterators need to be of type unsigned int, otherwise you will receive a warning at compile time, which invalidates your work.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;Now you have to create a function that find a substring inside a string.&lt;/p&gt;
+
+    &lt;p&gt;If what you have to find is null, return the whole string.&lt;/p&gt;
+
+    &lt;p&gt;But the idea is to find a character that match with the string you have. Them you look the next one, until there is a complete match. Otherwise change the character position to next one and repeat the process.&lt;/p&gt;
+
+    &lt;p&gt;There is different implementations of this function on Apple open source , Google android functions, GNU and BSD libraries. If you are stuck you can look on what they did.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;Be careful with the types. You receive an unsigned int and need to return an unsigned int. Do not create int iterators if you don’t know what you’re doing, otherwise you will have compile warning problems. This exercise you have to implement a function that concatenate a source string in a destiny string. Read on the man page what is the size parameter. This function is similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;strncat()&lt;/code&gt; that you already implemented. But there are differences. You can implement a function that calculates the length of a string, or you can use the followng snippet:&lt;/p&gt;
+
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// n is size , *d is the destiny string
+&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;dest_len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// then you do pointer arithmetic
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp C03 exercise assignment.</summary></entry><entry><title type="html">C 02 - General tips</title><link href="http://localhost:4000/blog/2021/07/27/General-Tips-5/" rel="alternate" type="text/html" title="C 02 - General tips" /><published>2021-07-27T00:27:00-03:00</published><updated>2021-07-27T00:27:00-03:00</updated><id>http://localhost:4000/blog/2021/07/27/%20General-Tips%205</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/27/General-Tips-5/">&lt;p&gt;General comments on how you can solve the 42Basecamp C02 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Quick reminders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In C02 you can only use  &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function at exercises 11 and 12. Do &lt;strong&gt;not&lt;/strong&gt; import &lt;code class=&quot;highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Think about the algorithm outside the computer. Use pen and paper to scratch around.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remember, you can’t import functions from libraries. But you can create yours !&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This exercise assignment is about reading man pages. Really. Exercises 1 to 8 are all similar, 9 and 10 are a bit difficult but totally doable. 11 and 12 are challenges.&lt;/p&gt;
+
+&lt;p&gt;11 and 12 are not listed here. If I have time until the end of the bootcamp I’ll comeback them.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;I will say nothing about this one. Just surprise yourself with : &lt;code class=&quot;highlighter-rouge&quot;&gt;man strcpy&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;Same as exercise 00, just with a tiny detail at the end. This detail is also explained on &lt;code class=&quot;highlighter-rouge&quot;&gt;man strcpy&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;Now, open your ASCII table! You will use it on exercises 2~8. The solution is just a while with an if condition using ASCII code.&lt;/p&gt;
+
+    &lt;p&gt;Do not forget the &lt;code class=&quot;highlighter-rouge&quot;&gt;str[j] != 0&lt;/code&gt; on the if condition.&lt;/p&gt;
+
+    &lt;p&gt;The null character is represented by &lt;code class=&quot;highlighter-rouge&quot;&gt;\0&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;Now you just have to change the if condition, to verify if it is numeric. ASCII table again!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;All the characters in the string must be lowercase. Yes, ASCII..&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;Same from exercise 04, but with uppercase. I think you already got the idea what is happening…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 06:&lt;/p&gt;
+
+    &lt;p&gt;The ASCII code you want is: &lt;code class=&quot;highlighter-rouge&quot;&gt;(~ &amp;lt; 32) and (= 127)&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 07:&lt;/p&gt;
+
+    &lt;p&gt;The difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;A&lt;/code&gt; in ASCII table is &lt;code class=&quot;highlighter-rouge&quot;&gt;32&lt;/code&gt;. So the operation the you want to do is &lt;code class=&quot;highlighter-rouge&quot;&gt;x - 32&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 08:&lt;/p&gt;
+
+    &lt;p&gt;Same as exercise 07, but now you do &lt;code class=&quot;highlighter-rouge&quot;&gt;x + 32&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 09:&lt;/p&gt;
+
+    &lt;p&gt;This exercise is not difficult. But is boring, you have to be careful and it will take some of your time. You want to compose the if conditions with all the constraints the problem states.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 10:&lt;/p&gt;
+
+    &lt;p&gt;It is not that clear of the exercise wants and the output is kinda obscure. Steps:&lt;/p&gt;
+
+    &lt;p&gt;Read the man page several times.&lt;/p&gt;
+
+    &lt;p&gt;Create a function that calculates the length of a string.&lt;/p&gt;
+
+    &lt;p&gt;You want to return an unsigned integer. Be careful to not create int type iterators.&lt;/p&gt;
+
+    &lt;p&gt;Read the man page again. Do not forget the null terminator.&lt;/p&gt;
+
+    &lt;p&gt;Size is size or size minus something?&lt;/p&gt;
+
+    &lt;p&gt;If you are stuck, read the apple source code for this function.&lt;/p&gt;
+
+    &lt;p&gt;Do tests while you progress with the function.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp C02 exercise assignment.</summary></entry><entry><title type="html">C 01 - General tips</title><link href="http://localhost:4000/blog/2021/07/22/General-Tips-4/" rel="alternate" type="text/html" title="C 01 - General tips" /><published>2021-07-22T05:54:00-03:00</published><updated>2021-07-22T05:54:00-03:00</updated><id>http://localhost:4000/blog/2021/07/22/General-Tips%204</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/22/General-Tips-4/">&lt;p&gt;General comments on how you can solve the 42Basecamp C01 exercise assignment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Quick reminders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In C01 you can use just &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function. Do &lt;strong&gt;not&lt;/strong&gt; import &lt;code class=&quot;highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; function is a system call function that belongs to POSIX. Import &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;unistd.h&amp;gt;&lt;/code&gt; so you can use it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://man7.org/linux/man-pages/man2/write.2.html&quot;&gt;Read the man page&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand the function signature:   &lt;code class=&quot;highlighter-rouge&quot;&gt;ssize_t write(int fd, const void *buf, size_t count);&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Visualize the quick sort algorithm &lt;a href=&quot;https://www.youtube.com/watch?v=XE4VP_8Y0BU&amp;amp;t=1s&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pseudocode for quick sort &lt;a href=&quot;https://www.cc.gatech.edu/classes/cs3158_98_fall/quicksort.html&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Think about the algorithm outside the computer. Use pen and paper to scratch around.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remember, you can’t import functions from libraries. But you can create yours !&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 00:&lt;/p&gt;
+
+    &lt;p&gt;You want to access the variable nbr, and change it. Read about the derreferentiator operator. It looks like a pointer but they are not the same.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 01:&lt;/p&gt;
+
+    &lt;p&gt;It is the same as the exercise 00, but repeated 9 times.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 02:&lt;/p&gt;
+
+    &lt;p&gt;In c, arguments are passed by value, not by reference. In other words, you have to access the variables and change them. You may consider a temporary variable so you do not lost your original values.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 03:&lt;/p&gt;
+
+    &lt;p&gt;Create two variables, one for storing the result of integer division (&lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;) and other for storing the value of mod operation (&lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;). After that use the derreferenciator operator to access the value inside the address passed as parameter, and change them accordingly:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;division receives the value of division operation;&lt;/li&gt;
+      &lt;li&gt;mod receives the value of mod operation.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 04:&lt;/p&gt;
+
+    &lt;p&gt;Do the same as exercise 03, but this the be careful to not lose your values. Create temporary variables to help you while you do the operations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 05:&lt;/p&gt;
+
+    &lt;p&gt;Build a while loop with a counter starting at 0. Loop over until the end of the string. You can use the ‘\0’ as the condition for your while. Example:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;while (….!= ‘\0’)&lt;/p&gt;
+
+        &lt;p&gt;When printing using write, remember you don’t need to use &amp;amp; for arrays, because they are already pointers, hence, contains an address inside of them.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 06:&lt;/p&gt;
+
+    &lt;p&gt;You can solve this using a loop structure similar to exercise 05 with a counter, to get the size of the string. You can also use the difference between 2 pointers, to get the size of the string. That works because pointers support arithmetic operations. So you can do something like (this is just a scratch) :&lt;/p&gt;
+
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;like&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 07:&lt;/p&gt;
+
+    &lt;p&gt;If you have an array like: [1,2,3,4,5]. If you reverse it, the result will be: [5, 4, 3, 2, 1]. Realize that you just perfomed &lt;code class=&quot;highlighter-rouge&quot;&gt;n / 2&lt;/code&gt;  operations, where  &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt;  is the size of the array. If you perform   &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt;  operations, you will undo the changes you made it, so you will get back to the original array.&lt;/p&gt;
+
+    &lt;p&gt;After that, you will loop inside the array and change the first element with the last and so on, until you reach the middle. The main problem is to get the array indices right. Also, create a temporary variable so you do not lose values.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exercise 08:&lt;/p&gt;
+
+    &lt;p&gt;This exercise you should implement any sort algorithm. You can use bubble sort, quick sort, merge sort etc. Look for references on how to implement them.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">General comments on how you can solve the 42Basecamp C01 exercise assignment.</summary></entry><entry><title type="html">C 00 - General tips</title><link href="http://localhost:4000/blog/2021/07/15/General-Tips-3/" rel="alternate" type="text/html" title="C 00 - General tips" /><published>2021-07-15T16:22:00-03:00</published><updated>2021-07-15T16:22:00-03:00</updated><id>http://localhost:4000/blog/2021/07/15/General-Tips%203</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/15/General-Tips-3/">&lt;p&gt;General comments on how you can solve the 42Basecamp C00 exercise assignment.&lt;/p&gt;
 
 &lt;!--more--&gt;
 

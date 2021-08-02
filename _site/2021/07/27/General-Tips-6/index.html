@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>C 03 - General tips</h2>
+        <i>posted on 27 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp C03 exercise assignment.</p>
+
+<!--more-->
+
+<p>Quick reminders:</p>
+
+<ul>
+  <li>
+    <p>In C03 you cannot use any function . Do <strong>not</strong>  <code class="highlighter-rouge">import</code> any library.</p>
+  </li>
+  <li>
+    <p>Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.</p>
+  </li>
+  <li>
+    <p>Think about the algorithm outside the computer. Use pen and paper to scratch around.</p>
+  </li>
+  <li>
+    <p>Remember, you can’t import functions from libraries. But you can create yours !</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>This assignment list, you will have to rewrite functions that already exists in libraries.</p>
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>First of all: <code class="highlighter-rouge">man strcmp</code>. Second, the output of this function is strange, so do not panic. You can import <code class="highlighter-rouge">&lt;string.h&gt;</code> just for debugging process. Do not forget to remove it!</p>
+
+    <p>Another thing to be careful is: your return can be negative if you don’t be cautious. Read about <em>casting</em>.</p>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>It is the same as exercise 00 but limited by a integer n. If you made 00 this one will be simple.</p>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>You have to write a function that concatenates two strings. Actually, there is an implementation on the man page.</p>
+
+    <p>Do not forget to add the <code class="highlighter-rouge">\0</code> at the end of concatenation.</p>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>As it happens with exercise 00/01, now you have to do the same you did on 02 but with an unsigned integer as a limit.</p>
+
+    <p>Remember that your iterators need to be of type unsigned int, otherwise you will receive a warning at compile time, which invalidates your work.</p>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>Now you have to create a function that find a substring inside a string.</p>
+
+    <p>If what you have to find is null, return the whole string.</p>
+
+    <p>But the idea is to find a character that match with the string you have. Them you look the next one, until there is a complete match. Otherwise change the character position to next one and repeat the process.</p>
+
+    <p>There is different implementations of this function on Apple open source , Google android functions, GNU and BSD libraries. If you are stuck you can look on what they did.</p>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>Be careful with the types. You receive an unsigned int and need to return an unsigned int. Do not create int iterators if you don’t know what you’re doing, otherwise you will have compile warning problems. This exercise you have to implement a function that concatenate a source string in a destiny string. Read on the man page what is the size parameter. This function is similar to <code class="highlighter-rouge">strncat()</code> that you already implemented. But there are differences. You can implement a function that calculates the length of a string, or you can use the followng snippet:</p>
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span> <span class="c1">// n is size , *d is the destiny string
+</span>		<span class="n">d</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">dest_len</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">dest</span><span class="p">;</span> <span class="c1">// then you do pointer arithmetic
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/C/">#C</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>

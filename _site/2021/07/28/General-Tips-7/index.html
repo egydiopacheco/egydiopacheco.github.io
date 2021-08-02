@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <link href="http://localhost:4000/blog/assets/css/style.css" type="text/css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <body>
+	<div id="main">
+  	<div id="logo">
+  <a href="http://localhost:4000/blog/">
+    <img src="http://localhost:4000/blog/assets/images/logo.gif" alt="Logo"></img>
+  </a>
+</div>
+
+  	<div id="nav">
+  <a href="http://localhost:4000/blog/">Blog</a> ·
+  <a href="http://localhost:4000/blog/about/">About</a> ·
+  <a href="http://localhost:4000/blog/projects/">Projects</a> .
+  <a href="http://localhost:4000/blog/notes/">Notes</a>
+</div>
+
+		<div id="content-left">
+      <div id="post">
+        <h2>C 04 - General tips</h2>
+        <i>posted on 28 Jul 2021</i>
+        <p>General comments on how you can solve the 42Basecamp C04 exercise assignment.</p>
+
+<!--more-->
+
+<p>Quick reminders:</p>
+
+<ul>
+  <li>
+    <p>In C04 you can only use  <code class="highlighter-rouge">write</code>. Do <strong>not</strong> import <code class="highlighter-rouge">stdio.h</code>.</p>
+  </li>
+  <li>
+    <p>Solve small problems first. Then compose it, to make more complex ones. Do not try to write the final code at first.</p>
+  </li>
+  <li>
+    <p>Think about the algorithm outside the computer. Use pen and paper to scratch around.</p>
+  </li>
+  <li>
+    <p>Remember, you can’t import functions from libraries. But you can create yours !</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Import <code class="highlighter-rouge">stdlib.h</code> and <code class="highlighter-rouge">string.h</code> so you can debug with the expected returns. Don’t forget to remove the imports!</p>
+
+<ul>
+  <li>
+    <p>Exercise 00:</p>
+
+    <p>You have done this exercise at C01 exercise 06.</p>
+  </li>
+  <li>
+    <p>Exercise 01:</p>
+
+    <p>You have done this exercise at C01 exercise 05.</p>
+  </li>
+  <li>
+    <p>Exercise 02:</p>
+
+    <p>You have done this exercise at C00 exercise 07.</p>
+  </li>
+  <li>
+    <p>Exercise 03:</p>
+
+    <p>To convert <code class="highlighter-rouge">char</code>  to <code class="highlighter-rouge">int</code>, use casting. Example: <code class="highlighter-rouge">x = (int) x;</code></p>
+
+    <p>To convert <code class="highlighter-rouge">int</code> to <code class="highlighter-rouge">char</code>, decompose in single characters (<code class="highlighter-rouge">0~9</code>) and then add <code class="highlighter-rouge">'0'</code></p>
+
+    <p>Take care about the restrictions of this particular function. Remember when debugging that, the output of the original <code class="highlighter-rouge">atoi</code> is different from <code class="highlighter-rouge">ft_atoi</code>.</p>
+  </li>
+  <li>
+    <p>Exercise 04:</p>
+
+    <p>Break down in multiple functions and test each of them separately. Suggestion of functions to build:</p>
+
+    <ul>
+      <li>ft_strlen() -&gt; returns the size of a string</li>
+      <li>ft_base_verify() -&gt; returns 0 if no errors found, -1 otherwise. Check all base constraints</li>
+      <li>ft_repetition() -&gt; return 0 if there are no repetitions, -1 otherwise. Verify if there are characters that repeats</li>
+      <li>ft_putnbr() -&gt; the function from exercise 02, but with modifications. You have to use the base!</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exercise 05:</p>
+
+    <p>It follows the same logic as the 04. It will take some time, it is not a simple exercise. If your time is not good, just go to the next list. But if you want to solve, break down into small functions, pay a lot of attention on the constraints. Most of your program will be constraint checking and a double while as the core algorithm.</p>
+  </li>
+</ul>
+
+
+        
+          <div id="categories">
+            <p><b>Categories:</b>&nbsp;
+              
+                <a href="http://localhost:4000/blog/categories/C/">#C</a>&nbsp;
+              
+            </p>
+          </div>
+        
+        
+  		</div>
+    </div>
+		<div id="footer">
+    <p>
+        <a href="https://github.com/egydiopacheco">GitHub</a> . 
+        <a href="https://twitter.com/Egydio18">Twitter</a>
+  </p>
+  <p>
+      <a href="http://localhost:4000/blog/contact/">Contact</a>
+
+  </p>
+</div>
+
+	</div>
+    </body>
+</html>
