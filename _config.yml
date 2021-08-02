@@ -2,8 +2,8 @@ title: My blog
 owner: Egydio
 email:
 description: Just my space to write things
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://egydiopacheco.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 language: en
 twitter_username: Egydio18
 github_username: egydiopacheco
